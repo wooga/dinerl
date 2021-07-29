@@ -51,7 +51,7 @@ call(AccessKeyId, SecretAccessKey, Zone, Target, Token, RFCDate, Body, Timeout) 
     EndPoint = endpoint(Zone),
     {ok, SHeader} = signature_header(AccessKeyId, SecretAccessKey, Target,
                                      Token, RFCDate, EndPoint, Body),
-    submit("http://" ++ EndPoint ++ "/",
+    submit("https://" ++ EndPoint ++ "/",
            [{"content-type", "application/x-amz-json-1.0"},
             {"x-amz-date", RFCDate},
             {"x-amz-security-token", Token},
