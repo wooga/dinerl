@@ -20,7 +20,7 @@ signature_header(AccessKeyId, SecretAccessKey, Target, Token, Date, EndPoint, Bo
     SignString = ["POST", $\n,
                   "/", $\n,
                   $\n,
-                  "host:", EndPoint, $\n,
+                  "host:", EndPoint, ":443", $\n,
                   "x-amz-date:", Date, $\n,
                   "x-amz-security-token:", Token, $\n,
                   "x-amz-target:", Target, $\n,
